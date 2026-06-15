@@ -24,7 +24,7 @@ SystemVerilog를 활용하여 CPU를 설계하고, 시뮬레이션을 통해 각
     *   **Immediate Extender**: 각 명령어 타입(I, S, B, U, J)에 맞추어 Immediate 값을 32-bit로 확장합니다.
     *   **Program Counter**: 분기 및 Jump 명령어에 따른 다음 실행 주소를 계산하여 갱신합니다.
 
-> Block Diagram
+> **Block Diagram**
 > <img width="1162" height="811" alt="RV32I_RSIBUJ" src="https://github.com/user-attachments/assets/2db1adbf-10a9-457f-9881-17723a24fb07" />
 
 ## 4. Supported Instruction Types
@@ -46,7 +46,7 @@ SystemVerilog를 활용하여 CPU를 설계하고, 시뮬레이션을 통해 각
 *   **Test Scenario**: `while` 루프를 순회하며 `adder` 함수를 호출하여 값을 누적.
 *   **Result**: 레지스터 `x10` (또는 `a0`)에 최종 누적합 결과인 `55` (Hex: `0x37`)가 정상적으로 연산 및 저장되는 것을 파형으로 확인했습니다.
 
-> Simulation Waveform
+> **Simulation Waveform**
 > <img width="2924" height="590" alt="image" src="https://github.com/user-attachments/assets/57313171-e3c5-4a88-b2dc-6417f562e6e9" />
 
 
@@ -58,4 +58,4 @@ SystemVerilog를 활용하여 CPU를 설계하고, 시뮬레이션을 통해 각
     *   **해결 방안**: Load(`I_L` type) 동작을 비동기식 조합 회로(`always_comb`)로 분리하여 데이터를 즉시 읽어오도록 수정함으로써 Race Condition을 방지하고 정상적인 데이터 로드가 가능하게 설계했습니다. 
 
 ## 7. Author
-*   **강동우 (Kang Dong-woo)**[cite: 8]
+*   **강동우 (Kang Dong-woo)**
